@@ -10,7 +10,7 @@ const Home = () => {
     //     setBlogs(newBlogs);
     // }
     
-    const {blogs,isPending} = useFetch('http://localhost:8000/blogs?_sort=id&_order=desc');
+    const {blogs,isPending} = useFetch('http://localhost:9090/blogs?_sort=id&_order=desc');
     
     return ( 
 

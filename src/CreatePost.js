@@ -7,7 +7,7 @@ const CreatePost = () => {
     const[author, setAuthor] = useState('');
     const[isPending, setIsPending] = useState(false);
     const history = useHistory();
-    //console.log(title, body, author);
+    console.log(title, body, author);
 
     function addTitle(e){
         setTitle(e.target.value);
@@ -18,7 +18,7 @@ const CreatePost = () => {
         const blog = {title, body, author};
         console.log(blog);
         setIsPending(true);
-        fetch('http://localhost:8000/blogs', {
+        fetch('http://localhost:9090/blogs', {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(blog)

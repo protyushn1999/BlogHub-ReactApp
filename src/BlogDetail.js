@@ -5,12 +5,12 @@ import { useHistory } from "react-router-dom";
 const BlogDetail = () => {
 
     const { id } = useParams();
-    const { blogs, isPending } = useFetch('http://localhost:8000/blogs/' + id);
+    const { blogs, isPending } = useFetch('http://localhost:9090/blogs/' + id);
     const history = useHistory();
 
 
     function handleClick(e){
-        fetch('http://localhost:8000/blogs/' + blogs.id, {
+        fetch('http://localhost:9090/blogs/' + blogs.id, {
             method: 'DELETE'
         }).then(() => {
             console.log('blog deleted');
